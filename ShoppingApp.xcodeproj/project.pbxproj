@@ -26,6 +26,11 @@
 		9E0D3CAE28B73DAD005EF457 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9E0D3CAD28B73DAD005EF457 /* SnapKit */; };
 		9E0D3CB128B7459D005EF457 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB028B7459D005EF457 /* ReusableProtocol.swift */; };
 		9E0D3CB328B752CB005EF457 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB228B752CB005EF457 /* RealmModel.swift */; };
+		9E0D3CB528B7703F005EF457 /* ShoppingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB428B7703F005EF457 /* ShoppingDetailViewController.swift */; };
+		9E0D3CB728B77050005EF457 /* ShoppingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB628B77050005EF457 /* ShoppingDetailView.swift */; };
+		9E0D3CBA28B7776A005EF457 /* imageDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB928B7776A005EF457 /* imageDummy.swift */; };
+		9E0D3CBD28B81269005EF457 /* shoppoingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CBC28B81269005EF457 /* shoppoingImageView.swift */; };
+		9E0D3CC128B81295005EF457 /* shoppoingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CC028B81295005EF457 /* shoppoingImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,11 @@
 		9E0D3C9A28B7393F005EF457 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		9E0D3CB028B7459D005EF457 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 		9E0D3CB228B752CB005EF457 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		9E0D3CB428B7703F005EF457 /* ShoppingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingDetailViewController.swift; sourceTree = "<group>"; };
+		9E0D3CB628B77050005EF457 /* ShoppingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingDetailView.swift; sourceTree = "<group>"; };
+		9E0D3CB928B7776A005EF457 /* imageDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDummy.swift; sourceTree = "<group>"; };
+		9E0D3CBC28B81269005EF457 /* shoppoingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppoingImageView.swift; sourceTree = "<group>"; };
+		9E0D3CC028B81295005EF457 /* shoppoingImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppoingImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 		9E0D3C7728B73674005EF457 /* ShoppingApp */ = {
 			isa = PBXGroup;
 			children = (
+				9E0D3CB828B77755005EF457 /* shoppingImagePage */,
 				9E0D3C9928B73932005EF457 /* CustomView */,
 				9E0D3C8E28B736BF005EF457 /* Base */,
 				9E0D3C8D28B736A1005EF457 /* ShoppingDetailPage */,
@@ -112,6 +123,8 @@
 		9E0D3C8D28B736A1005EF457 /* ShoppingDetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				9E0D3CB428B7703F005EF457 /* ShoppingDetailViewController.swift */,
+				9E0D3CB628B77050005EF457 /* ShoppingDetailView.swift */,
 			);
 			path = ShoppingDetailPage;
 			sourceTree = "<group>";
@@ -131,6 +144,16 @@
 				9E0D3C9A28B7393F005EF457 /* TextField.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		9E0D3CB828B77755005EF457 /* shoppingImagePage */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D3CB928B7776A005EF457 /* imageDummy.swift */,
+				9E0D3CBC28B81269005EF457 /* shoppoingImageView.swift */,
+				9E0D3CC028B81295005EF457 /* shoppoingImageViewController.swift */,
+			);
+			path = shoppingImagePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,16 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0D3CBA28B7776A005EF457 /* imageDummy.swift in Sources */,
 				9E0D3C9228B736D9005EF457 /* BaseViewController.swift in Sources */,
 				9E0D3C9828B7391C005EF457 /* ShoppingListTableViewCell.swift in Sources */,
 				9E0D3CB128B7459D005EF457 /* ReusableProtocol.swift in Sources */,
+				9E0D3CBD28B81269005EF457 /* shoppoingImageView.swift in Sources */,
 				9E0D3CB328B752CB005EF457 /* RealmModel.swift in Sources */,
 				9E0D3C9628B738AA005EF457 /* ShoppingListView.swift in Sources */,
 				9E0D3C7D28B73674005EF457 /* ViewController.swift in Sources */,
 				9E0D3C9428B7389E005EF457 /* ShoppingListViewController.swift in Sources */,
+				9E0D3CB528B7703F005EF457 /* ShoppingDetailViewController.swift in Sources */,
 				9E0D3C7928B73674005EF457 /* AppDelegate.swift in Sources */,
 				9E0D3C9B28B7393F005EF457 /* TextField.swift in Sources */,
 				9E0D3C7B28B73674005EF457 /* SceneDelegate.swift in Sources */,
+				9E0D3CB728B77050005EF457 /* ShoppingDetailView.swift in Sources */,
+				9E0D3CC128B81295005EF457 /* shoppoingImageViewController.swift in Sources */,
 				9E0D3C9028B736CE005EF457 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

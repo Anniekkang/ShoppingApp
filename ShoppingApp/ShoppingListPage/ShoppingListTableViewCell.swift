@@ -52,13 +52,15 @@ class ShoppingListTableViewCell: UITableViewCell {
         constraints()
        
         
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-
+    
+  
     func configure(){
         
         self.addSubview(stackView)

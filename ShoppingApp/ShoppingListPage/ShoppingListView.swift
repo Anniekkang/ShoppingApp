@@ -43,10 +43,10 @@ class ShoppingListView: BaseView {
     }()
     
     override func configure() {
-        [shoppingTextField,listTableView].forEach {
+        [shoppingTextField,listTableView,saveButton].forEach {
             self.addSubview($0)
         }
-        shoppingTextField.addSubview(saveButton)
+       
         
         
     }

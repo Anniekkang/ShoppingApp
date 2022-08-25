@@ -13,7 +13,6 @@ class ShoppingListViewController: BaseViewController {
 
     let mainView = ShoppingListView()
     
-    
     let localRealm = try! Realm() //2.
     
     var tasks: Results<shoppingModel>! {
@@ -35,6 +34,7 @@ class ShoppingListViewController: BaseViewController {
 
         configure()
     
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,12 +54,23 @@ class ShoppingListViewController: BaseViewController {
         
         mainView.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonTapped))
         print("Realm is located at:", localRealm.configuration.fileURL!)
     }
     
+    //정렬버튼
+    @objc func sortButtonTapped(){
+        
+        
+        tasks = localRealm.objects(shoppingModel.self).sorted(byKeyPath: "list", ascending: true)
+        
+        
+    }
     
     //realm 저장
     @objc func saveButtonTapped(){
+        print("button tapped")
         
         guard let title = mainView.shoppingTextField.text else { return }
         let task = shoppingModel(list: title)
@@ -74,12 +85,8 @@ class ShoppingListViewController: BaseViewController {
        
                    mainView.listTableView.reloadData()
                    mainView.shoppingTextField.text = ""
-        
-    
 
-    
-    
-}
+    }
     
 }
 
@@ -94,9 +101,31 @@ extension ShoppingListViewController : UITableViewDelegate, UITableViewDataSourc
         cell.backgroundColor = .systemGray5
         cell.layer.cornerRadius = 5
         cell.setData(data: tasks[indexPath.row])
+        cell.checkBoxButton.addTarget(self, action: #selector(checkboxButtonTapped), for: .touchUpInside)
+        cell.favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
+        
         
         
         return cell
+    }
+    
+    
+    @objc func checkboxButtonTapped(){
+        
+        
+        
+    }
+    
+    @objc func favoriteButtonTapped(){
+        
+        
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ShoppingDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -104,7 +133,21 @@ extension ShoppingListViewController : UITableViewDelegate, UITableViewDataSourc
     }
     
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            if let tasksFordeletion = tasks?[indexPath.row] {
+                try! localRealm.write({
+                    localRealm.delete(tasksFordeletion)
+                })
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
  }
 
+}
