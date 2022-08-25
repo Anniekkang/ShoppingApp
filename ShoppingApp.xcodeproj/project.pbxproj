@@ -25,6 +25,7 @@
 		9E0D3CAB28B739BC005EF457 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9E0D3CAA28B739BC005EF457 /* Kingfisher */; };
 		9E0D3CAE28B73DAD005EF457 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9E0D3CAD28B73DAD005EF457 /* SnapKit */; };
 		9E0D3CB128B7459D005EF457 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB028B7459D005EF457 /* ReusableProtocol.swift */; };
+		9E0D3CB328B752CB005EF457 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB228B752CB005EF457 /* RealmModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		9E0D3C9728B7391C005EF457 /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
 		9E0D3C9A28B7393F005EF457 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		9E0D3CB028B7459D005EF457 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		9E0D3CB228B752CB005EF457 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				9E0D3C8328B73675005EF457 /* LaunchScreen.storyboard */,
 				9E0D3C8628B73675005EF457 /* Info.plist */,
 				9E0D3CB028B7459D005EF457 /* ReusableProtocol.swift */,
+				9E0D3CB228B752CB005EF457 /* RealmModel.swift */,
 			);
 			path = ShoppingApp;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				9E0D3C9228B736D9005EF457 /* BaseViewController.swift in Sources */,
 				9E0D3C9828B7391C005EF457 /* ShoppingListTableViewCell.swift in Sources */,
 				9E0D3CB128B7459D005EF457 /* ReusableProtocol.swift in Sources */,
+				9E0D3CB328B752CB005EF457 /* RealmModel.swift in Sources */,
 				9E0D3C9628B738AA005EF457 /* ShoppingListView.swift in Sources */,
 				9E0D3C7D28B73674005EF457 /* ViewController.swift in Sources */,
 				9E0D3C9428B7389E005EF457 /* ShoppingListViewController.swift in Sources */,

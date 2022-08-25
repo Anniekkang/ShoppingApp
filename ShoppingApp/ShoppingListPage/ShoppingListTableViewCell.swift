@@ -10,6 +10,11 @@ import UIKit
 class ShoppingListTableViewCell: UITableViewCell {
 
     
+    func setData(data: shoppingModel) {
+        listLabel.text = data.list
+        
+    }
+    
     let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .horizontal
@@ -45,6 +50,7 @@ class ShoppingListTableViewCell: UITableViewCell {
         
         configure()
         constraints()
+       
         
     }
     

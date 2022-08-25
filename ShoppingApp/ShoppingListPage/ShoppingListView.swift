@@ -53,16 +53,16 @@ class ShoppingListView: BaseView {
     
     override func setConstraints() {
         shoppingTextField.snp.makeConstraints { make in
-            make.topMargin.equalTo(safeAreaLayoutGuide).offset(30)
-            make.leadingMargin.equalTo(safeAreaLayoutGuide).offset(30)
-            make.trailingMargin.equalTo(safeAreaLayoutGuide).offset(-30)
+            make.topMargin.equalTo(30)
+            make.leadingMargin.equalTo(30)
+            make.trailingMargin.equalTo(saveButton.snp.leadingMargin).offset(-30)
             make.height.equalTo(80)
         }
         
         saveButton.snp.makeConstraints { make in
-            make.topMargin.equalTo(shoppingTextField.snp.topMargin).offset(20)
-            make.bottomMargin.equalTo(shoppingTextField.snp.bottomMargin).offset(-20)
-            make.trailingMargin.equalTo(shoppingTextField.snp.trailingMargin).offset(-20)
+            make.topMargin.equalTo(shoppingTextField.snp.topMargin)
+            make.bottomMargin.equalTo(shoppingTextField.snp.bottomMargin)
+            make.trailingMargin.equalTo(safeAreaLayoutGuide).offset(-30)
             make.width.equalTo(50)
         }
         
