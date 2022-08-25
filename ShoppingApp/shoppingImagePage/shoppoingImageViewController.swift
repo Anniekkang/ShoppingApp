@@ -42,15 +42,6 @@ extension shoppoingImageViewController : UICollectionViewDelegate, UICollectionV
     
     
    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? shoppingImageCollectionViewCell else { return }
-        
-        selectedImage = cell.imageView.image
-        selectedIndexPath = indexPath
-       
-        print(#function)
-        
-    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: shoppingImageCollectionViewCell.reuseIdentifier, for: indexPath) as? shoppingImageCollectionViewCell else { return UICollectionViewCell()}
         
@@ -61,6 +52,19 @@ extension shoppoingImageViewController : UICollectionViewDelegate, UICollectionV
         
         return cell
     }
+    
+    
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         guard let cell = collectionView.cellForItem(at: indexPath) as? shoppingImageCollectionViewCell else { return }
+         
+         selectedImage = cell.imageView.image
+         selectedIndexPath = indexPath
+         print(selectedIndexPath)
+         collectionView.reloadData()
+        
+         print(#function)
+         
+     }
     
     @objc func selectedImageButtonTapped(){
         print(#function)
