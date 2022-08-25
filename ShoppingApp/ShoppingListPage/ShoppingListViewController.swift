@@ -83,9 +83,10 @@ class ShoppingListViewController: BaseViewController {
                 print(Error.self)
             }
        
-                   mainView.listTableView.reloadData()
-                   mainView.shoppingTextField.text = ""
-
+        mainView.listTableView.reloadData()
+        mainView.shoppingTextField.text = ""
+        view.endEditing(true)
+      
     }
     
 }

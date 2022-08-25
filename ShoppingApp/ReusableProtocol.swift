@@ -29,3 +29,7 @@ extension UITableViewCell: ReusableViewProtocol {
         return String(describing: self)
     }
 }
+
+protocol SelectImageDelegate {
+    func sendImageDate(image : UIImage)
+}

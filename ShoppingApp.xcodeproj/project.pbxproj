@@ -31,6 +31,7 @@
 		9E0D3CBA28B7776A005EF457 /* imageDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CB928B7776A005EF457 /* imageDummy.swift */; };
 		9E0D3CBD28B81269005EF457 /* shoppoingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CBC28B81269005EF457 /* shoppoingImageView.swift */; };
 		9E0D3CC128B81295005EF457 /* shoppoingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CC028B81295005EF457 /* shoppoingImageViewController.swift */; };
+		9E0D3CC328B81F88005EF457 /* shoppingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D3CC228B81F88005EF457 /* shoppingImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		9E0D3CB928B7776A005EF457 /* imageDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageDummy.swift; sourceTree = "<group>"; };
 		9E0D3CBC28B81269005EF457 /* shoppoingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppoingImageView.swift; sourceTree = "<group>"; };
 		9E0D3CC028B81295005EF457 /* shoppoingImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppoingImageViewController.swift; sourceTree = "<group>"; };
+		9E0D3CC228B81F88005EF457 /* shoppingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				9E0D3CB928B7776A005EF457 /* imageDummy.swift */,
 				9E0D3CBC28B81269005EF457 /* shoppoingImageView.swift */,
 				9E0D3CC028B81295005EF457 /* shoppoingImageViewController.swift */,
+				9E0D3CC228B81F88005EF457 /* shoppingImageCollectionViewCell.swift */,
 			);
 			path = shoppingImagePage;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				9E0D3CB728B77050005EF457 /* ShoppingDetailView.swift in Sources */,
 				9E0D3CC128B81295005EF457 /* shoppoingImageViewController.swift in Sources */,
 				9E0D3C9028B736CE005EF457 /* BaseView.swift in Sources */,
+				9E0D3CC328B81F88005EF457 /* shoppingImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
