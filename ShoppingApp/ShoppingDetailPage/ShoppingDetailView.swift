@@ -21,6 +21,7 @@ class ShoppingDetailView: BaseView {
         let view = UIImageView()
         view.layer.cornerRadius = 5
         view.backgroundColor = .systemGray5
+        view.image = UIImage(systemName: "star")
         return view
     }()
     

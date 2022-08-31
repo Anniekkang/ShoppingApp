@@ -26,7 +26,6 @@ class shoppingImageCollectionViewCell: UICollectionViewCell {
     let imageView : UIImageView = {
        let view = UIImageView()
         view.contentMode = .scaleAspectFill
-        view.backgroundColor = .clear
         view.clipsToBounds = true
         return view
         

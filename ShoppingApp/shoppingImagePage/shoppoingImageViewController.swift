@@ -59,7 +59,7 @@ extension shoppoingImageViewController : UICollectionViewDelegate, UICollectionV
          
          selectedImage = cell.imageView.image
          selectedIndexPath = indexPath
-         print(selectedIndexPath)
+         print(selectedIndexPath!)
          collectionView.reloadData()
         
          print(#function)
@@ -69,8 +69,10 @@ extension shoppoingImageViewController : UICollectionViewDelegate, UICollectionV
     @objc func selectedImageButtonTapped(){
         print(#function)
        
-        delegate?.sendImageDate(image: selectedImage!)
-       dismiss(animated: true)
+        dismiss(animated: true)
+    
+        ShoppingDetailViewController().mainView.detailImageView.image = UIImage(systemName: "star.fill")
+      
   
         
     }

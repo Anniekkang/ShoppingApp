@@ -30,6 +30,8 @@ class ShoppingDetailViewController: BaseViewController {
 
     override func configure() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action:   #selector(detailsaveButtonTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark") , style: .plain, target: self, action: #selector(xmarkButtonTapped))
+        
         
         mainView.imageButton.addTarget(self, action: #selector(imageButtonTapped), for: .touchUpInside)
     }
@@ -42,10 +44,21 @@ class ShoppingDetailViewController: BaseViewController {
         
     }
     
+    @objc func xmarkButtonTapped(){
+        dismiss(animated: true)
+    }
+    
     // Realm+imagedocument에 저장
     @objc func detailsaveButtonTapped(){
+       
         guard let title = mainView.detailTextField.text else { return }
-        let task = shoppingModel(list: title)
+        guard let textView = mainView.detailTextView.text else {
+            return
+        }
+        
+        
+        
+        let task = detailShoppingModel(textField: title, textView: textView, ImageURL: nil)
         do{
             try localRealm.write {
                 localRealm.add(task)
@@ -55,8 +68,11 @@ class ShoppingDetailViewController: BaseViewController {
         }
         
         if let image = mainView.detailImageView.image {
-            saveToDocument(fileName: "\(task.objectId)", image: image)
+            saveToDocument(fileName: "\(task.objectId).jpg", image: image)
         }
+        
+        mainView.detailTextField.text = task.textField
+        mainView.detailTextView.text = task.textView
         
         dismiss(animated: true)
   

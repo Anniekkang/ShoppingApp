@@ -14,6 +14,7 @@ class shoppingModel : Object {
     @Persisted var checkbox : Bool
     @Persisted var list : String
     
+    
     @Persisted(primaryKey: true) var objectId : ObjectId
     
     convenience init(list : String){
@@ -21,6 +22,25 @@ class shoppingModel : Object {
         self.list = list
         self.favorite  = false
         self.checkbox = false
+        
     }
     
+}
+
+
+class detailShoppingModel : Object {
+    @Persisted var textField : String
+    @Persisted var textView : String
+    @Persisted var ImageURL : String?
+    
+    @Persisted(primaryKey: true) var objectId : ObjectId
+    
+    convenience init(textField : String, textView : String, ImageURL : String?){
+        self.init()
+        self.textField = textField
+        self.ImageURL = ImageURL
+        self.textView = textView
+        
+        
+    }
 }

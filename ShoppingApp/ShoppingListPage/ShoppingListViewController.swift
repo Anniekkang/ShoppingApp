@@ -126,7 +126,8 @@ extension ShoppingListViewController : UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ShoppingDetailViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let navi = UINavigationController(rootViewController: vc)
+        self.present(navi, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
